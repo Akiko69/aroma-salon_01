@@ -1,0 +1,459 @@
+@charset "utf-8";
+
+/* 初期スタイル調整 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+  Arial, "メイリオ", Meiryo, sans-sarif;
+  color: #806342;
+  background-color: #fff;
+}
+
+/* ナビゲーションをページ上部に固定*/
+header {
+  position: fixed;
+  width: 100vw;      /*  */
+  top: 0;
+  z-index: 10000;
+}
+
+/* 各要素の初期スタイル調整 */
+h1, h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+ul a {
+  color: #806342;
+  text-decoration: none;
+}
+
+div a{
+  color: #00f;
+  line-height: 2;
+}
+
+
+a:hover{
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+ul {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+
+/*ヘッダー*/
+.header{
+  display: flex;
+  margin: 0px auto;    /*  img center keep */
+  height: 130px;
+  background-color: #806342;
+}
+
+/*ロゴ*/
+.logo{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 130px;
+  object-fit: cover;
+  width: 70px;
+  height: auto;
+}
+
+
+/*メイン 「width85%」はno chg!*/
+.main{
+  width: 85%;      /* borderlineのバランスがいい */
+  margin: auto;
+}
+
+/*トップ（メインイメージ）*/
+.top{
+  text-align: center;
+  margin-top: 0;
+  padding: 0;    /* 「.logo」との上下の間隔 */
+  width: 100%;
+  object-fit: cover;
+  position: relative;   /* 要素の位置を下にずらす */
+  top: 50px;
+  left: 20px;
+  right: 80px;
+  bottom: 0px;
+}
+
+
+/* ナビ */
+.nav{
+  text-align: center;
+  padding-top: 0;
+  margin-top: 15px;
+  height: 0;
+  background-color: #806342;
+  margin-left: 150px;
+}
+.nav-list li{
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-list li:first-child{
+  border-left: none;
+}
+
+.nav-list li a{
+  display: block;
+  font-size: 12px;
+  padding: 1em;
+  text-decoration: none;
+  text-transform: uppercase;   /*大文字に変更*/
+  color: #fff;
+}
+ul.nav-list li::first-line{
+  font-size: 14px;  /*1行目のフォントを太く、大きく*/
+  font-weight: bold;
+}
+ul.nav-list li a:hover{
+  background: #996633;       /*ホバー時の背景色をつける*/
+}
+
+/* セクション */
+.section{
+  margin: 0 auto 50px;  /* 「auto」親要素に対して水平方向中央に配置 */
+  position: relative;
+  top: 0px;
+  left: 50px;
+  right: 50px;
+  bottom: 10px;
+}
+
+/* 見出し */
+.heading{
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+
+/* concept */
+.container{
+  display: flex;
+  gap: 60px 40px;      /* 要素間の余白 */
+}
+
+
+
+.leftBottom{
+  padding-left: 20px;   /* 「border」と「文字」間の余白*/
+  border-left: 3px solid #806342;
+  border-bottom: 2px solid #806342;
+  text-transform: uppercase;   /*大文字に変更*/
+  margin-top: 120px;
+}
+
+.image_size{
+  width: 550px;
+  object-fit: cover;
+}
+
+
+/* menu */
+.menu{
+  text-align: center;
+}
+
+
+.menu-list{
+  display: inline-block;
+  list-style: disc;   /* 「・」の記述 */
+  text-align: left;   /* 文章が「・」のすぐ横から始まる */
+  padding-left: 350px;
+}
+
+.menu-list li{
+  margin-bottom: 10px;
+}
+
+.menu-list li:nth-child(7){
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.menu-list li:nth-child(7)::before{
+  content: "※";
+  padding-right: 0.5em;
+  padding-top: 1em;
+}
+
+
+
+/* サロン情報 */
+.access_address{
+  padding-left: 130px;   /* テキストの配置 */
+  font-size: 14px;
+}
+
+.access_address strong{
+  font-size: 14px;
+}
+
+.letter::before{
+content: "▪️";
+}
+
+.container_address{
+  display: flex;
+  gap: 0px 0px;      /* 要素間の余白 */
+}
+
+.logo_Image{
+  margin-left: 200px;   /* ロゴ画像の配置 */
+}
+
+
+
+/* フォームの指定 */
+form{
+  margin: 0 auto;
+  /*margin: 10px;*/
+  padding: 20px;
+  background: #fff;
+}
+
+/* フォームの3つのブロックに対する指定 */
+.form-group {
+  margin: 0 auto;;
+  margin-bottom: 20px;
+}
+
+/* 項目名に対する指定 */
+.form-label {
+  display: block;
+  color: #806342;
+}
+
+/* 入力欄に対する指定 */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+}
+
+/* 送信ボタンを囲む<div>に対する指定 */
+.form-btn {
+  margin: 30px 0;
+  text-align: center;
+}
+
+
+form-col{
+  flex: 2 1 30px;
+  margin-left: 0;  /*「dt」要素との間隔指定 */
+}
+
+/* 各フォームのサイズを調整 */
+input[type="text"],input[type="email"],input[type="tel"], textarea{
+  border: 1px solid #999;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+textarea{
+  height: 5em;
+}
+
+/* ボタンのスタイル */
+a.btn_send {
+  max-width: 300px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background: #806342;
+  border: 1px solid #999;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 0 45px 0 25px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+a.btn_send:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  margin-top: -6px;
+}
+a.btn_send:hover {
+  background: #fff;
+  color: #000;
+}
+a.btn_send:hover:before {
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+}
+
+/*=============
+base
+=============*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+/* ボタンの装飾はココまで */
+
+/* スムーススクロールの装飾 */
+/* ボタンのスタイル */
+#page-top {
+/* buttonタグのリセットCSS */
+border: none;
+cursor: pointer;
+outline: none;
+padding: 0;
+appearance: none;
+
+/* ボタンの装飾 */
+position: fixed;
+right: 30px;
+bottom: 30px;
+z-index: 100;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: #806342;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+
+/* 矢印のスタイル */
+#page-top::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-bottom: -6px;
+  border-top: solid 3px #fff;
+  border-right: solid 3px #fff;
+  transform: rotate(-45deg);
+}
+
+/* ホバー時のスタイル */
+#page-top:hover {
+  transform: scale(1.1);
+}
+/* スムーススクロール装飾はココまで */
+
+/* フッター */
+.footer{
+  text-align: center;
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #806342;
+}
+/*.footer-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 850px;   /*リストが要素内に横一列に並ぶよう幅を広める
+  margin: 0 250px;    リストが中央にくる
+}*/
+
+/*.footer-body{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding-top: 50px;
+  padding-right: 30px
+}
+
+.footer-nav-list li{
+  display: inline-block;
+  border-left: 1px solid #fff;
+}
+
+.footer-nav-list li:first-child{
+  border-left: none;
+}
+
+.footer-nav-list a{
+  color: #fff;
+  padding: 0 5px; /* 「border-left」と「文字」との余白*/
+  text-transform: uppercase;   /*大文字に変更*/
+}
+
+/* SNSのリンクボタン */
+.footer-sns {
+  margin: 20px 0;
+  text-align: center; /* 中身を左右中央揃えで配置 */
+}
+.footer-sns a {
+/* インラインの性質を保ちながら、ブロックレベルの性質を加えている。横並びに配置しながら、外余白を指定 */
+  display: inline-block;
+  margin: 0 5px;
+}
+.footer-sns img {
+  vertical-align: middle; /* 垂直方向中央揃えで配置*/
+}
+
+
+
+/* コピーライト */
+.copyright{
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: #fff;
+}
+.copyright small{
+  font-size: 11px;
+}
